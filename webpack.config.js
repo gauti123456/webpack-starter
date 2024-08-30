@@ -2,9 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     bundle: path.resolve(__dirname, 'src/index.js'),
   },
@@ -49,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack App',
+      title: 'Webpack Sample Jokes App',
       filename: 'index.html',
       template: 'src/template.html',
     }),
